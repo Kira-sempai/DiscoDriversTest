@@ -100,6 +100,7 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+	//  printf("Hello, world!\n\r");
   /* USER CODE END WHILE */
 
   /* USER CODE BEGIN 3 */

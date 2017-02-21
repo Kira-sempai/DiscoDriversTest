@@ -33,6 +33,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f7xx_hal.h"
 #include "usb_device.h"
+#include "usbd_cdc_if.h"
 
 /* USER CODE BEGIN Includes */
 
@@ -87,7 +88,8 @@ int main(void)
   while (1)
   {
 		HAL_Delay(1000);
-		CDC_Transmit_HS("HELLO!!!!!!!!!!!!", 8);
+		uint8_t *buf = (uint8_t*)"Hello, World!\n\r";
+		CDC_Transmit_HS(buf, 16);
   /* USER CODE END WHILE */
 
   /* USER CODE BEGIN 3 */
